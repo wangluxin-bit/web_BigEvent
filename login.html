@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大事件项目</title>
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+    <!-- 导入自己的css样式 -->
+    <link rel="stylesheet" href="./assets/css/mylogin.css">
+</head>
+
+<body>
+    <div class="layui-main">
+        <!-- logo -->
+        <img src="./assets/images/logo.png" alt="">
+    </div>
+    <!-- 登录窗体 -->
+    <div class="login">
+        <div class="login-logo"></div>
+        <!-- 登录 -->
+        <div class="login-denglu">
+            <form class="layui-form" action="" id="form-denglu">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" lay-verify="required" autocomplete="off" placeholder="请输入用户名"
+                        class="layui-input" required>
+                </div>
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="password" lay-verify="required|pwd" autocomplete="off"
+                        placeholder="请输入密码" class="layui-input" required>
+                </div>
+                <!-- 登录按钮 -->
+                <div class="layui-form-item">
+                    <!-- 注意：表单提交按钮和普通按钮的区别就是lay-submit的属性 -->
+                    <button type="submit" class="layui-btn layui-btn-radius layui-btn-fluid layui-btn-normal"
+                        lay-submit="">登录</button>
+                </div>
+                <div class="layui-form-item links">
+                    <!-- 注意：表单提交按钮和普通按钮的区别就是lay-submit的属性 -->
+                    <a href="javascript:;" id="zhece">还没有注册吧？注册账号</a>
+                </div>
+            </form>
+        </div>
+        <!-- 注册 -->
+        <div class="login-zhuce">
+            <form class="layui-form" action="" id="form-zhuce">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" lay-verify="required" autocomplete="off" placeholder="请输入用户名"
+                        class="layui-input" required>
+                </div>
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="password" lay-verify="required|pwd" autocomplete="off"
+                        placeholder="请输入密码" class="layui-input" required>
+                </div>
+                <!-- 确认密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="repassword" lay-verify="required|repwd|pwd" autocomplete="off"
+                        placeholder="请输入密码" class="layui-input" required>
+                </div>
+                <!-- 注册按钮 -->
+                <div class="layui-form-item">
+                    <!-- 注意：表单提交按钮和普通按钮的区别就是lay-submit的属性 -->
+                    <button type="submit" class="layui-btn layui-btn-radius layui-btn-fluid layui-btn-normal"
+                        lay-submit="">注册</button>
+                </div>
+                <div class="layui-form-item links">
+                    <a href="javascript:;" id="denglu">走，去登录</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<!-- 导入layui的js文件 -->
+<script src="./assets/lib/layui/layui.all.js"></script>
+<!-- 导入jQuery文件 -->
+<script src="./assets/lib/jquery.js"></script>
+<!-- 导入baseAPI.js文件 -->
+<script src="./assets/js/baseAPI.js"></script>
+<!-- 导入自己的js文件 -->
+<script src="./assets/js/mylogin.js"> </script>
+
+</html>
