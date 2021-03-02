@@ -60,10 +60,10 @@ $(function () {
         // console.log(res);
         // console.log("注册成功");
         layui.layer.msg('注册成功，请登录！', { icon: 6 })
+
       }
     })
   })
-
   // 给登录表单添加submit事件
   $('#form-denglu').on('submit', function (e) {
     // 阻止默认行为
