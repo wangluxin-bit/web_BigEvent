@@ -1,4 +1,15 @@
 $(function () {
+    // 1.1 获取裁剪区域的 DOM 元素
+    let $image = $('#image')
+    // 1.2 配置选项
+    var options = {
+        // 纵横比
+        aspectRatio: 1,
+        // 指定预览区域
+        preview: '.img-preview'
+    }
+    // 1.3 创建裁剪区域
+    $image.cropper(options)
     // console.log("1111");
     // 通过获取用户信息来获取头像URL地址
     $.ajax({
@@ -9,21 +20,15 @@ $(function () {
                 return layui.layer.msg("获取用户信息失败");
             }
             // console.log(res)
-            $('#image').attr('src', res.data.user_pic)
+            // console.log(res.data.user_pic);
+            $('#image').cropper('destroy').attr('src', res.data.user_pic)
+            // console.log($('#image').attr('src'));
+            // 1.3 创建裁剪区域
+            $('#image').cropper(options)
         }
     });
 
-    // 1.1 获取裁剪区域的 DOM 元素
-    let $image = $('#image')
-    // 1.2 配置选项
-    const options = {
-        // 纵横比
-        aspectRatio: 1,
-        // 指定预览区域
-        preview: '.img-preview'
-    }
-    // 1.3 创建裁剪区域
-    $image.cropper(options)
+
 
     // 给上传按钮注册点击事件
     $('#upfiles').on('click', function () {

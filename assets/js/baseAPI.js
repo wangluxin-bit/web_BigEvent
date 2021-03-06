@@ -5,7 +5,7 @@
 $.ajaxPrefilter(function (opt) {
   // console.log(opt.url);
   opt.url = "http://ajax.frontend.itheima.net" + opt.url
-  console.log(opt.url);
+  // console.log(opt.url);
 
   // 统一为有权限的接口，配置headers请求头
   if (opt.url.indexOf('/my/') !== -1) {

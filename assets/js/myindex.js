@@ -15,6 +15,12 @@ $(function () {
             location.href = "/login.html"
         });
     })
+
+    // 为发布文章绑定点击事件
+    $('#fb').on('click', function () {
+        // console.log("111");
+        localStorage.removeItem('id')
+    })
 })
 function getUseInfo() {
     // console.log("111");
