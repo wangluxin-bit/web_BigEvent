@@ -30,8 +30,6 @@ $(function () {
             , content: $('#dialog-add').html()
         });
     })
-
-
     // 通过代理的形式，为form-add表单绑定submit事件
     $('body').on('submit', "#form-add", function () {
         // 通过ajax获取数据
