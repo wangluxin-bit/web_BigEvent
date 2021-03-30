@@ -62,6 +62,7 @@ $(function () {
         });
         // 自定义属性获取所编辑对应的ID值
         let id = $(this).attr("data-id")
+        console.log(id);
         // console.log(id);
         // 通过ajax来获取文章内容
         $.ajax({

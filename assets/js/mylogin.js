@@ -78,7 +78,6 @@ $(function () {
         if (res.status !== 0) {
           return layui.layer.msg("亲登陆失败，请重新登录");
         }
-
         layui.layer.msg("登录成功了，真棒");
         // 把res.token添加到localstorage
         localStorage.setItem('token', res.token)
